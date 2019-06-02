@@ -1,0 +1,54 @@
+body {
+	background-color: #FBFAF8;
+}
+
+h2, p {
+	color: black;
+}
+
+.burger {
+	border-color: black;
+}
+
+.geklikt {
+	border-color: white;
+}
+
+.pijlen {
+	color: black;
+}
+
+#columns div:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+h2 {
+	border-bottom: 0.1rem solid black;
+}
+
+.info {
+	color: #243640;
+}
+
+@keyframes bottomkleur {
+  100% {
+    background-color: #BFBDB8;
+  }
+}
+
+@keyframes topkleur {
+  0% {
+    background-color: #BFBDB8;
+  }
+  100% {
+    background-color: #FBFAF8;
+  }
+}
+
+@supports (grid-area: auto) {
+	@media (min-width: 1000px) {
+	  main {
+	    border-bottom: 0.1rem solid black;
+	  }
+	}
+}

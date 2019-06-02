@@ -1,0 +1,370 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 1.5rem;
+  color: white;
+  background-color: #191b1a;
+  position: relative;
+}
+
+main {
+  margin: auto;
+  max-width: 100rem;
+}
+
+.bottom {
+  animation-name: bottomkleur;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.top {
+  animation-name: topkleur;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bottomkleur {
+  100% {
+    background-color: #243640;
+  }
+}
+
+@keyframes topkleur {
+  0% {
+    background-color: #243640;
+  }
+  100% {
+    background-color: #191b1a;
+  }
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  padding-bottom: 0.7rem;
+  color: #EC9862;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: lighter;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid white;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #EC9862;
+  cursor:pointer;
+}
+
+nav {
+  background-color: rgba(61,61,61, 0.8);
+  height: 100vh;
+  width: 25vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5rem 1.5rem;
+  font-size: 1.5rem;
+  z-index: 1;
+  transform: translate(-50vw, 0);
+  animation-timing-function: linear;
+}
+
+nav a {
+  display: block;
+  padding-bottom: 1rem;
+}
+
+nav img {
+  max-height: 50vh;
+  margin-top: 15vh;
+}
+
+.zichtbaar {
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-name: toonNav;
+}
+
+.onzichtbaar {
+  animation-duration: 0.3s;
+  animation-name: verbergNav;
+}
+
+@keyframes toonNav {
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes verbergNav {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50vw, 0);
+  }
+}
+
+.mode {
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  line-height: 1.5rem;
+}
+
+.mode a {
+  display: inline;
+}
+
+.mode a:nth-child(1) {
+  padding-right: 1rem;
+  display: inline;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.burger {
+  border-bottom: 12px double white;
+  border-top: 4px solid white;
+  content: "";
+  height: 5px;
+  width: 30px;
+  position: fixed;
+	top: 1.5rem;
+  left: 1.5rem;
+  z-index: 2;
+  transition-duration: 0.25s;
+  transition-property: all;
+}
+
+.burger:hover {
+  border-color: #EC9862;
+}
+
+.geklikt {
+	position: fixed;
+}
+
+#columns {
+  column-count: 1;
+}
+
+#columns div {
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+  break-inside: avoid;
+  color: rgba(255, 255, 255, 0);
+  filter: grayscale(100%);
+  transition-property: all;
+  transition-duration: 0.75s;
+}
+
+#columns div:hover {
+  color: rgba(255, 255, 255, 1);
+  filter: none;
+}
+
+#columns img {
+	max-width: 100%;
+	display: block;
+	margin-bottom: 0.5rem;
+  border-radius: 3%;
+}
+
+#me {
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  height: auto;
+  width: 50vw;
+  max-width: 100%;
+  border-radius: 3%;
+  filter: grayscale(100%);
+}
+
+#email {
+  font-style: italic;
+}
+
+.pijlen {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  transition-duration: 0.25s;
+  transition-property: all;
+}
+
+#pijl {
+  top: 0;
+}
+
+#pijl2 {
+  bottom: -1rem;
+}
+
+.pijlen:hover {
+  color: #EC9862;
+}
+
+.burger:active {
+  transform: scale(1.25);
+}
+
+.pijlen:active {
+  transform: scale(1.5);
+}
+
+.verbergpijl {
+  display: none;
+}
+
+.info {
+  position: absolute;
+  bottom: -1rem;
+  left: -100vw;
+  transition-property: left;
+  transition-duration: 1s;
+  color: #EC9659;
+  font-weight: normal;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+#object {
+  margin-top: 2rem;
+  max-height: 10rem;
+  animation-name: zweef;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.verbergtekst {
+  display: none;
+}
+
+#aboutmain p {
+  font-size: 1.15rem;
+}
+
+@keyframes zweef {
+  50% {
+    transform: translate(0, -2rem);
+  }
+}
+
+@supports (grid-area: auto) {
+  @media (min-width: 1000px) {
+    #aboutmain {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    main {
+      border-bottom: 0.1rem solid white;
+      padding: 2rem 0;
+    }
+
+    h1, h2 {
+      text-align: right;
+    }
+
+    #object {
+      margin-top: 4rem;
+    }
+
+  	#columns {
+  		column-count: 2;
+  		column-gap: 3rem;
+  	}
+
+    #me {
+      width: 30vw;
+    }
+
+    .burger {
+      top: 3rem;
+      left: 1.5rem;
+    }
+
+    body {
+      margin: 3rem 5rem;
+    }
+
+    nav {
+      width: 20vw;
+      max-width: 15rem;
+      padding: 7rem 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    #pijl, #pijl2 {
+      right: -3.5rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+
+    .burger {
+      top: 3rem;
+      left: 3rem;
+    }
+
+    #object {
+      margin-top: 6rem;
+    }
+
+  	#columns {
+  		column-count: 3;
+  	}
+
+    body {
+      margin: 3rem 8rem;
+    }
+
+    nav {
+      padding: 7rem 3rem;
+    }
+
+    #pijl, #pijl2 {
+      right: -5rem;
+    }
+  }
+}
