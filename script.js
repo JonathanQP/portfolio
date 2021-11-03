@@ -35,7 +35,7 @@ lightLink.addEventListener("click", lightSwitch);
 darkLink.addEventListener("click", darkSwitch);
 
 let images = ["img/me.png", "img/me2.png", "img/me3.png", "img/me4.png", "img/me5.png", "img/me6.png", "img/me7.png", "img/me8.png", "img/me9.png"];
-let me = document.querySelector("#me");
+let me = document.querySelector("#mepic");
 let willekeurigGetal = function(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
