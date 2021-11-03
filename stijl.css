@@ -192,6 +192,11 @@ nav img {
   padding-right: 2rem;
 }
 
+#mona {
+  max-width: 70vw;
+  max-height: 80vh;
+}
+
 .subpage h3 {
   text-align: center;
   padding-bottom: 2rem;
