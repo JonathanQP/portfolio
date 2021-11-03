@@ -75,6 +75,12 @@ a {
   color: white;
 }
 
+h3 a {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: #EC9862;
+}
+
 a:hover {
   color: #EC9862;
   cursor:pointer;
@@ -172,6 +178,62 @@ nav img {
 	position: fixed;
 }
 
+.subpage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.subpage img {
+  display: block;
+  max-width: 40vw;
+  max-height: 60vh;
+  margin: auto;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+}
+
+.subpage h3 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.subpage .uitleg {
+  grid-column: 2;
+}
+
+.uitleg p {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+.subpage .imgs {
+  grid-column: 1;
+}
+
+.subpage .info {
+  bottom: 0.5rem;
+}
+
+.uitleg a {
+  color: #EC9862;
+}
+
+.uitleg a:hover {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+video {
+  max-width: 45vw;
+  max-height: 80vh;
+  margin: auto;
+  display: block;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+
 #columns {
   column-count: 1;
 }
@@ -187,9 +249,18 @@ nav img {
   transition-duration: 0.75s;
 }
 
+#columns div a {
+  color: rgba(255, 255, 255, 0);
+  transition-duration: 0.75s;
+}
+
 #columns div:hover {
   color: rgba(255, 255, 255, 1);
   filter: none;
+}
+
+#columns div:hover a {
+  color: #EC9862;
 }
 
 #columns img {
